@@ -11,25 +11,27 @@ import java.util.Scanner;
  * from user and execute the arithmetic operation
  * change the code to use enum instead String and mention the advantage of enum.
  * @author sivagamasrinivasan
- * 
+ * @author AryanRana
  */
 public class ArithmeticBase 
 {
  public double x,y;
+ 
+ enum Execute{PLUS , MINUS, TIMES, DIVIDE};
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        Execute input = Execute.valueOf(sc.next().toUpperCase());
+        switch (input) 
         {
-            case "PLUS":
+            case PLUS:
                 return x + y;
-            case "MINUS":
+            case MINUS:
                 return x - y;
-            case "TIMES":
+            case TIMES:
                 return x * y;
-            case "DIVIDE":
+            case DIVIDE:
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);

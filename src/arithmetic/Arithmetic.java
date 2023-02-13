@@ -13,11 +13,10 @@ import static java.time.Clock.system;
  * arithmetic operations based on user input
  * execute the code check the output
  * @author sivagamasrinivasan
- * 
+ * @author AryanRana
  */
 public class Arithmetic 
 {
-
     /**
      * @param args the command line arguments
      */
